@@ -20,23 +20,12 @@ public:
 class Message : public Bean
 {
 public:
-	Message(VOID){};
+	Message ( Buffer& buf ):Bean ( buf ) {};
 	~Message(VOID){};
 	vector<ulong>& GetSendID(VOID) const;
 	virtual INT GetID(VOID) const = 0;
 private:
 	vector<ulong> m_SendID;
-};
-
-class MessageQueue : public Buffer
-{
-public:
-	MsgQueue( UINT buf_size );
-	~MsgQueue(VOID);
-private:
-	Buffer *_bufA;
-	Buffer *_bufB;
-	Buffer *_bufC;
 };
 
 #endif

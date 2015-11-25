@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 #include "buffer.h"
 
 Buffer::Buffer( BOOL isRoot /* = false */, UINT vsize /* = -1 */ )
@@ -8,7 +6,13 @@ Buffer::Buffer( BOOL isRoot /* = false */, UINT vsize /* = -1 */ )
 	{
 		this->m_buf = new CHAR[vsize];
 		this->m_len = vsize;
+	} else
+	{
+		this->m_buf = NULL;
+		m_len = 0;
 	}
+	m_head = 0;
+	m_tail = 0;
 }
 
 VOID Buffer::Init( CHAR* buf, UINT len )

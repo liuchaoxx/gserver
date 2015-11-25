@@ -31,6 +31,9 @@
     <Filter Include="core\thread">
       <UniqueIdentifier>{f52eaca5-d399-4da7-9be5-84074a8e3de6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core\design">
+      <UniqueIdentifier>{cef35da6-5fb7-499b-90f2-1b98922709bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -68,6 +71,12 @@
     </ClInclude>
     <ClInclude Include="..\core\thread\sync_lock.h">
       <Filter>core\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\design\policy.h">
+      <Filter>core\design</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\design\smart_pointer.h">
+      <Filter>core\design</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

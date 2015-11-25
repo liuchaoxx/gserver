@@ -8,15 +8,6 @@
 #define GET_TCACHE_ID(x)	( (x) != NULL ? (x)->GetPoolID() : INVALID_ID ); 
 #define RELEASE_TCACHE_OBJ(x) (x)->Release();
 
-class CacheObject
-{
-public:
-	UINT GetCacheID(VOID) const { return m_CacheID; };
-	VOID SetCacheID(UINT cid) { this->m_CacheID = cid; }
-private:
-	UINT m_CacheID;
-};
-
 template<typename T> class TCache
 {
 public:

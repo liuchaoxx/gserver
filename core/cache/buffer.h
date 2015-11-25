@@ -7,7 +7,7 @@
 class Buffer
 {
 public:
-	Buffer( BOOL isRoot = false, UINT vsize = -1 ):m_buf(NULL), m_len(0), m_head(0), m_tail(0);
+	Buffer( BOOL isRoot = false, UINT vsize = -1 );
 	~Buffer(VOID) {};
 public:
 	VOID Init( CHAR* buf, UINT len );
