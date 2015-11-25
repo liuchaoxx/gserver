@@ -79,10 +79,23 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\core\assertx.h" />
+    <ClInclude Include="..\core\base_type.h" />
+    <ClInclude Include="..\core\cache\buffer.h" />
+    <ClInclude Include="..\core\cache\tcache.h" />
+    <ClInclude Include="..\core\message\IHandler.h" />
+    <ClInclude Include="..\core\message\message.h" />
+    <ClInclude Include="..\core\server\IServer.h" />
+    <ClInclude Include="..\core\socket\socket.h" />
+    <ClInclude Include="..\core\thread\sync_lock.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\core\assertx.cpp" />
+    <ClCompile Include="..\core\cache\buffer.cpp" />
+    <ClCompile Include="..\core\message\message.cpp" />
+    <ClCompile Include="..\core\socket\socket.cpp" />
     <ClCompile Include="gcore.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

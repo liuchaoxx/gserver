@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{7de18162-c38e-4197-9797-acb4e9838548}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\cache">
+      <UniqueIdentifier>{9daa83c8-b858-4fab-a230-1f7a2d0d75f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\message">
+      <UniqueIdentifier>{52193652-b458-487f-83f7-128c564e4a07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\server">
+      <UniqueIdentifier>{d8bcc406-4b51-408d-b81a-c2ef50e5f93c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\socket">
+      <UniqueIdentifier>{afed1a6d-9215-4f84-be3c-8514a49b4030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\thread">
+      <UniqueIdentifier>{f52eaca5-d399-4da7-9be5-84074a8e3de6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,6 +42,33 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\core\assertx.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\base_type.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\cache\buffer.h">
+      <Filter>core\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\cache\tcache.h">
+      <Filter>core\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\message\message.h">
+      <Filter>core\message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\message\IHandler.h">
+      <Filter>core\message</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\server\IServer.h">
+      <Filter>core\server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\socket\socket.h">
+      <Filter>core\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\thread\sync_lock.h">
+      <Filter>core\thread</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -31,6 +76,18 @@
     </ClCompile>
     <ClCompile Include="gcore.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\core\assertx.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\core\cache\buffer.cpp">
+      <Filter>core\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\core\message\message.cpp">
+      <Filter>core\message</Filter>
+    </ClCompile>
+    <ClCompile Include="..\core\socket\socket.cpp">
+      <Filter>core\socket</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
