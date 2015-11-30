@@ -1,6 +1,8 @@
 #ifndef _SMART_POINTER_H
 #define _SMART_POINTER_H
 
+#include "policy.h"
+
 template<class T>
 class IThreadModel
 {
@@ -45,24 +47,37 @@ struct EnsureNotNull
 	}
 };
 
+class ExtendWidget : public Widget {};
+
 template<
 	class T, 
-	template<class> class CheckPolicy, 
+	template<class> class CheckPolicy,
 	template<class> class ThreadPolicy
 >
 class SmartPointor : public CheckPolicy<T>, public ThreadPolicy<T>
 {
 public:
+	SmartPointor ( ) {}
+	template< class T1, template<class> class CP1, template<class> class TP1 >
+	SmartPointor ( const SmartPointor<T1, CP1, TP1 >& other ): CheckPolicy<T> ( ( const CheckPolicy<T>& ) other ), ThreadPolicy<T> ( ( const ThreadPolicy<T>& )other )
+	{
+		this->pointee_ = other.GetPointer();
+	}
+
 	T* operator->( )
 	{
 		typename ThreadPolicy<T>::Lock guard ( *this );
 		CheckPolicy<T>::Check ( pointee_ );
 		return pointee_;
 	}
+
+	T* GetPointer ()const { return pointee_; }
+	void SetPointer ( T* ptr ) { this->pointee_ = ptr };
 private:
 	T* pointee_;
 };
 
-
+typedef SmartPointor<Widget, NoChecking, SingleThread> WNSPtr;
+typedef SmartPointor<ExtendWidget, NoChecking, SingleThread> EWNSPtr;
 
 #endif

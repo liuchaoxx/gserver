@@ -87,6 +87,8 @@
     <ClInclude Include="..\core\base_type.h" />
     <ClInclude Include="..\core\cache\buffer.h" />
     <ClInclude Include="..\core\cache\tcache.h" />
+    <ClInclude Include="..\core\design\conversion.h" />
+    <ClInclude Include="..\core\design\int2type.h" />
     <ClInclude Include="..\core\design\policy.h" />
     <ClInclude Include="..\core\design\smart_pointer.h" />
     <ClInclude Include="..\core\message\IHandler.h" />

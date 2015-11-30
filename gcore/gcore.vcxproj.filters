@@ -78,6 +78,12 @@
     <ClInclude Include="..\core\design\smart_pointer.h">
       <Filter>core\design</Filter>
     </ClInclude>
+    <ClInclude Include="..\core\design\int2type.h">
+      <Filter>core\design</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\design\conversion.h">
+      <Filter>core\design</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

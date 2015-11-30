@@ -56,6 +56,7 @@ protected:
 class Widget
 {
 public:
+	Widget ( int count_, int flag ) {}
 	int count_;
 	Widget* Clone ()
 	{
