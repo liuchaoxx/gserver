@@ -80,4 +80,10 @@ private:
 typedef SmartPointor<Widget, NoChecking, SingleThread> WNSPtr;
 typedef SmartPointor<ExtendWidget, NoChecking, SingleThread> EWNSPtr;
 
+void test_small_pointer ()
+{
+	EWNSPtr *eptr = new EWNSPtr ();
+	WNSPtr* ptr = new WNSPtr ( *eptr );
+}
+
 #endif

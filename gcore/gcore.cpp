@@ -10,25 +10,12 @@
 
 
 #include <Windows.h>
-#include <iostream>
-#include <vector>
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-// 	WidgetMgr *mgr = new WidgetMgr();
-// 	mgr->PrintWedgetInfo ( );
-// 	Widget *obj = new Widget();
-// 	mgr->SwitchProtoType ( obj );
-
-	
-// 	EWNSPtr *eptr = new EWNSPtr ();
-// 	WNSPtr* ptr = new WNSPtr ( *eptr );
-
-	using namespace std;
-	cout << Conversion<double, int>::exists <<' '
-		<< Conversion<char, char*>::exists << ' '
-		<<Conversion<size_t, vector<int>>::exists << ' ';
-
+	test_policy ();
+	test_small_pointer ();
+	test_conversion ();
 
 	while (1)
 	{

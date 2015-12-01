@@ -56,6 +56,7 @@ protected:
 class Widget
 {
 public:
+	Widget () {}
 	Widget ( int count_, int flag ) {}
 	int count_;
 	Widget* Clone ()
@@ -82,5 +83,12 @@ public:
 };
 
 typedef WidgetManager<OptCloneCreator> WidgetMgr;
+
+void test_policy ()
+{
+	WidgetMgr *mgr = new WidgetMgr();
+	mgr->PrintWedgetInfo ( );
+	Widget *obj = new Widget();
+	mgr->SwitchProtoType ( obj );}
 
 #endif
