@@ -84,6 +84,9 @@
     <ClInclude Include="..\core\design\conversion.h">
       <Filter>core\design</Filter>
     </ClInclude>
+    <ClInclude Include="..\core\design\traits.h">
+      <Filter>core\design</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

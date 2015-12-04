@@ -7,15 +7,17 @@
 #include "design/smart_pointer.h"
 #include "design/int2type.h"
 #include "design/conversion.h"
-
+#include "design/traits.h"
 
 #include <Windows.h>
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	test_policy ();
-	test_small_pointer ();
-	test_conversion ();
+// 	test_policy ();
+// 	test_small_pointer ();
+// 	test_conversion ();
+	test_traits ();
+
 
 	while (1)
 	{
