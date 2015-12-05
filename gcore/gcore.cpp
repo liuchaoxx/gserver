@@ -8,6 +8,7 @@
 #include "design/int2type.h"
 #include "design/conversion.h"
 #include "design/traits.h"
+#include "design/type_list.h"
 
 #include <Windows.h>
 
@@ -16,7 +17,8 @@ int _tmain(int argc, _TCHAR* argv[])
 // 	test_policy ();
 // 	test_small_pointer ();
 // 	test_conversion ();
-	test_traits ();
+//	test_traits ();
+	test_type_list ();
 
 
 	while (1)

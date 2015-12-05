@@ -90,9 +90,11 @@
     <ClInclude Include="..\core\cache\tcache.h" />
     <ClInclude Include="..\core\design\conversion.h" />
     <ClInclude Include="..\core\design\int2type.h" />
+    <ClInclude Include="..\core\design\null_type.h" />
     <ClInclude Include="..\core\design\policy.h" />
     <ClInclude Include="..\core\design\smart_pointer.h" />
     <ClInclude Include="..\core\design\traits.h" />
+    <ClInclude Include="..\core\design\type_list.h" />
     <ClInclude Include="..\core\message\IHandler.h" />
     <ClInclude Include="..\core\message\message.h" />
     <ClInclude Include="..\core\server\IServer.h" />

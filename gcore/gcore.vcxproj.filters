@@ -87,6 +87,12 @@
     <ClInclude Include="..\core\design\traits.h">
       <Filter>core\design</Filter>
     </ClInclude>
+    <ClInclude Include="..\core\design\null_type.h">
+      <Filter>core\design</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\design\type_list.h">
+      <Filter>core\design</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
