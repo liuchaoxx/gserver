@@ -93,6 +93,15 @@
     <ClInclude Include="..\core\design\type_list.h">
       <Filter>core\design</Filter>
     </ClInclude>
+    <ClInclude Include="..\core\design\gen_hierarchy.h">
+      <Filter>core\design</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\design\empty_type.h">
+      <Filter>core\design</Filter>
+    </ClInclude>
+    <ClInclude Include="..\core\design\event_handler.h">
+      <Filter>core\design</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

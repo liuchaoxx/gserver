@@ -191,6 +191,47 @@ struct Replace<TypeList<Head, Tail>, T, U>
 	typedef TypeList<Head, typename Replace<Tail, T, U>::Result> Result;
 };
 
+//------------------------------------------------------
+//≈≈–Ú
+template<class TList, class T> struct MostDerived;
+
+template<class T>
+struct MostDerived<NullType, T>
+{
+	typedef  T Result;
+};
+
+template<class Head, class Tail, class T>
+struct MostDerived<TypeList<Head, Tail>, T>
+{
+private:
+	typedef typename MostDerived<Tail, T>::Result Candidate;
+public:
+	typedef typename Select<SUPERSUBCLASS ( Candidate, Head ), Head, Candidate>::Result Result;
+};
+
+
+template<class TList> struct MostDerivedToFont;
+template<> struct MostDerivedToFont<NullType>
+{
+	typedef  NullType Result;
+};
+
+template<class Head, class Tail>
+struct MostDerivedToFont<TypeList<Head, Tail>>
+{
+private:
+	typedef typename MostDerived<Tail, Head>::Result TheMostDerived;
+	typedef typename Replace<Tail, TheMostDerived, Head>::Result L;
+public:
+	typedef TypeList<TheMostDerived, L> Result;
+};
+
+class A1 {};
+class B1:public A1 {};
+class C1:public A1 {};
+class D1:public C1 {};
+
 void test_type_list ()
 {
 	using namespace std;
@@ -223,5 +264,11 @@ void test_type_list ()
 
 	cout << "Replace == " << Conversion<long, TypeAt<Replace<TYPELIST_3 ( int, char, short ), char, long>::Result, 1>::Result>::sameType << "\n";
 	cout << "Replace == " << Conversion<char, TypeAt<Replace<TYPELIST_3 ( int, char, short ), char, long>::Result, 1>::Result>::sameType << "\n";
+
+	//B D C A
+	cout << "MostDerived == " << Conversion<D1, TypeAt<MostDerivedToFont<TYPELIST_4 ( A1, B1, C1, D1 )>::Result, 0>::Result>::sameType << "\n";
+	cout << "MostDerived == " << Conversion<B1, TypeAt<MostDerivedToFont<TYPELIST_4 ( A1, B1, C1, D1 )>::Result, 1>::Result>::sameType << "\n";
+	cout << "MostDerived == " << Conversion<C1, TypeAt<MostDerivedToFont<TYPELIST_4 ( A1, B1, C1, D1 )>::Result, 2>::Result>::sameType << "\n";
+	cout << "MostDerived == " << Conversion<A1, TypeAt<MostDerivedToFont<TYPELIST_4 ( A1, B1, C1, D1 )>::Result, 3>::Result>::sameType << "\n";
 }
 #endif

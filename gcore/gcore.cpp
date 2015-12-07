@@ -9,6 +9,8 @@
 #include "design/conversion.h"
 #include "design/traits.h"
 #include "design/type_list.h"
+#include "design/gen_hierarchy.h"
+#include "design/event_handler.h"
 
 #include <Windows.h>
 
