@@ -88,6 +88,7 @@
     <ClInclude Include="..\core\base_type.h" />
     <ClInclude Include="..\core\cache\buffer.h" />
     <ClInclude Include="..\core\cache\tcache.h" />
+    <ClInclude Include="..\core\design\chunk.h" />
     <ClInclude Include="..\core\design\conversion.h" />
     <ClInclude Include="..\core\design\empty_type.h" />
     <ClInclude Include="..\core\design\event_handler.h" />

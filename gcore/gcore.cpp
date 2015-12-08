@@ -11,6 +11,7 @@
 #include "design/type_list.h"
 #include "design/gen_hierarchy.h"
 #include "design/event_handler.h"
+#include "design/chunk.h"
 
 #include <Windows.h>
 
