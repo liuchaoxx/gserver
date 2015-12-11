@@ -105,6 +105,9 @@
     <ClInclude Include="..\core\design\chunk.h">
       <Filter>core\design</Filter>
     </ClInclude>
+    <ClInclude Include="..\core\design\functor.h">
+      <Filter>core\design</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

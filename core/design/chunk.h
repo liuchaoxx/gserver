@@ -28,7 +28,7 @@ void Chunk::Init ( std::size_t blocksize, unsigned char blocks )
 		*p = ++i;
 }
 
-void* Chunk::Allocate ( std::size_t blocksize )
+void* Chunk::Allocate ( std::size_t blocksize )  
 {
 	if ( !blocksAvailable_ ) return 0;
 	unsigned char* pResult = pData_ + ( firstAvailableBlock_ * blocksize );

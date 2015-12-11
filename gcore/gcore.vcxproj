@@ -92,6 +92,7 @@
     <ClInclude Include="..\core\design\conversion.h" />
     <ClInclude Include="..\core\design\empty_type.h" />
     <ClInclude Include="..\core\design\event_handler.h" />
+    <ClInclude Include="..\core\design\functor.h" />
     <ClInclude Include="..\core\design\gen_hierarchy.h" />
     <ClInclude Include="..\core\design\int2type.h" />
     <ClInclude Include="..\core\design\null_type.h" />

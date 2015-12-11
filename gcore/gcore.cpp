@@ -12,6 +12,7 @@
 #include "design/gen_hierarchy.h"
 #include "design/event_handler.h"
 #include "design/chunk.h"
+#include "design/functor.h"
 
 #include <Windows.h>
 
@@ -21,7 +22,8 @@ int _tmain(int argc, _TCHAR* argv[])
 // 	test_small_pointer ();
 // 	test_conversion ();
 //	test_traits ();
-	test_type_list ();
+//	test_type_list ();
+	test_functor_main ();
 
 
 	while (1)
