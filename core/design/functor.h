@@ -52,7 +52,7 @@ public:
 	Functor (){};
 	Functor ( const Functor& fun ) { this->spImpl_ = fun.spImpl_; };
 	explicit Functor ( std::auto_ptr<Impl> spImpl ):spImpl_ ( spImpl ) {}
-	template<class Fun> Functor ( const Fun& fun ):spImpl_ ( new FunctorHandler<Functor, Fun> ( fun ) ) {}
+	template<typename Fun> Functor ( const Fun& fun ):spImpl_ ( new FunctorHandler<Functor, Fun> ( fun ) ) {}
 
 	Functor& operator =( const Functor& fun ) 
 	{
@@ -128,6 +128,11 @@ void test_function ( int i, double d )
 {
 	cout << "test_function(" << i << " , " << d << ") called. \n";
 }
+const char* test_function_retvalue ( double, double )
+{
+	static const char buffer[] = "hello world";
+	return buffer;
+}
 
 void test_functor_main ()
 {
@@ -135,7 +140,10 @@ void test_functor_main ()
 // 	Functor<void, TYPELIST_2 ( int, double )> cmdf ( f );
 // 	cmdf ( 4, 4.5 );
 
-	Functor<void, TYPELIST_2 ( int, double )> cmdf1 ( test_function );
-	cmdf1 ( 4, 4.5 );
+// 	Functor<void, TYPELIST_2 ( int, double )> cmdf1 ( &test_function );
+// 	cmdf1 ( 4, 4.5 );
+
+	Functor<string, TYPELIST_2 ( int, int )> cmd2 ( &test_function_retvalue );
+	cout << cmd2 ( 10, 10 ).substr ( 7 );
 }
 #endif
